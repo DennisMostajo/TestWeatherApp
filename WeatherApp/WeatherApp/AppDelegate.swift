@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        debugPrint("didFinishLaunchingWithOptions")
+//        DataBaseHelper.DBUpdate() // Run migrations
+        let navController = UINavigationController(rootViewController: WeatherVc())
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
+//        if StorageHelper.isFirstTime(){
+//            DataBaseHelper.setDefaultCities()
+//            debugPrint("AppDelegate: IS FIRST TIME")
+//            StorageHelper.setIsFirstTime(true)
+//        }
+//        else{
+//            debugPrint("AppDelegate: IS NOT FIRST TIME")
+//        }
         return true
     }
 
