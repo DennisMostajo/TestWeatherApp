@@ -10,12 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityWeatherCell" customModule="WeatherApp" customModuleProvider="target">
-            <connections>
-                <outlet property="name" destination="YOd-RQ-D6P" id="63O-pe-2KV"/>
-                <outlet property="temperature" destination="LEe-2y-GZe" id="bYd-ad-7jC"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityWeatherCell" customModule="WeatherApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="identifierCityWeatherCell" id="KGk-i7-Jjw" customClass="CityWeatherCell" customModule="WeatherApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
@@ -26,9 +21,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-RQ-D6P">
                         <rect key="frame" x="16" y="11" width="216" height="48"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="48" id="ywj-T9-1NC"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,8 +28,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEe-2y-GZe">
                         <rect key="frame" x="240" y="11" width="64" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="64" id="1Gn-pf-ozK"/>
-                            <constraint firstAttribute="height" constant="48" id="lLU-JA-iEy"/>
+                            <constraint firstAttribute="width" constant="64" id="GZc-mZ-2Hq"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -45,17 +36,20 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LEe-2y-GZe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3Pd-YN-mqN"/>
-                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="6Nf-wN-Jfr"/>
-                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="JCm-Sq-Wz6"/>
-                    <constraint firstItem="LEe-2y-GZe" firstAttribute="leading" secondItem="YOd-RQ-D6P" secondAttribute="trailing" constant="8" id="kSs-CE-BqO"/>
-                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="oRl-XL-yaS"/>
-                    <constraint firstItem="LEe-2y-GZe" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="pJb-X8-EJj"/>
-                    <constraint firstItem="LEe-2y-GZe" firstAttribute="leading" secondItem="YOd-RQ-D6P" secondAttribute="trailing" constant="8" id="tKT-rq-kt7"/>
-                    <constraint firstItem="LEe-2y-GZe" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="x2m-gW-XmI"/>
+                    <constraint firstItem="LEe-2y-GZe" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="3aG-oU-655"/>
+                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CJu-zS-qY6"/>
+                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="COp-F5-oWd"/>
+                    <constraint firstItem="LEe-2y-GZe" firstAttribute="leading" secondItem="YOd-RQ-D6P" secondAttribute="trailing" constant="8" symbolic="YES" id="I53-m3-Py8"/>
+                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="firstBaseline" secondItem="LEe-2y-GZe" secondAttribute="firstBaseline" id="Sa3-jA-Tre"/>
+                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="mmX-el-XGo"/>
+                    <constraint firstItem="YOd-RQ-D6P" firstAttribute="baseline" secondItem="LEe-2y-GZe" secondAttribute="baseline" id="yfe-yO-OL6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="name" destination="YOd-RQ-D6P" id="cgh-Ci-dYt"/>
+                <outlet property="temperature" destination="LEe-2y-GZe" id="82b-mC-P17"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="147.52623688155924"/>
         </tableViewCell>
     </objects>

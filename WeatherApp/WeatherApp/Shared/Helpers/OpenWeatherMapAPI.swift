@@ -24,8 +24,8 @@ enum OpenWeatherMapAPI: URLRequestConvertible
     {
         switch self
         {
-        default:
-            return .get
+            default:
+                return .get
         }
     }
     
@@ -33,8 +33,8 @@ enum OpenWeatherMapAPI: URLRequestConvertible
     {
         switch self
         {
-        case .getWeatherCity:
-            return "\(WEATHER)"
+            case .getWeatherCity:
+                return "\(WEATHER)"
         }
     }
     
@@ -49,11 +49,11 @@ enum OpenWeatherMapAPI: URLRequestConvertible
         
         switch self
         {
-        case .getWeatherCity(let lat, let lon):
-            parameters["lat"] = lat as AnyObject
-            parameters["lon"] = lon as AnyObject
-            parameters["appid"] = API_KEY as AnyObject
-            parameters["units"] = units as AnyObject
+            case .getWeatherCity(let lat, let lon):
+                parameters["lat"] = lat as AnyObject
+                parameters["lon"] = lon as AnyObject
+                parameters["appid"] = API_KEY as AnyObject
+                parameters["units"] = units as AnyObject
             break
         }
         debugPrint(parameters)

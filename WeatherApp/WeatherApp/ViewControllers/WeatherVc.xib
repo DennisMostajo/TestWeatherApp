@@ -13,13 +13,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherVc" customModule="WeatherApp" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherTable" destination="zUt-4H-vAB" id="Cip-4u-B1U"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zUt-4H-vAB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="acQ-at-Fg1"/>
+                        <outlet property="delegate" destination="-1" id="g3X-gX-VUX"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zUt-4H-vAB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ga1-ov-fZn"/>
+                <constraint firstAttribute="trailing" secondItem="zUt-4H-vAB" secondAttribute="trailing" id="WzX-fR-vYe"/>
+                <constraint firstItem="zUt-4H-vAB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lFB-T3-rNf"/>
+                <constraint firstItem="zUt-4H-vAB" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="s2X-x5-Sos"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
