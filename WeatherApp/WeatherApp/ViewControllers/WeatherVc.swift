@@ -23,6 +23,7 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     let fahBtn = UIButton(frame:CGRect(x:277, y:12, width:35, height:21))
     
     @IBOutlet var weatherTable: UITableView!
+    var refreshControl = UIRefreshControl()
     private let locationManager = CLLocationManager()
     var weatherCitiesFromDataBase:Results<CityModel>? = nil
     
@@ -39,6 +40,9 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         weatherTable.register(UINib(nibName: "CityWeatherCell", bundle: nil), forCellReuseIdentifier: "identifierCityWeatherCell")
         weatherTable.separatorColor = UIColor.init(hex: 0xD66B31)
         weatherTable.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: weatherTable.frame.size.width, height: 1))
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
+        weatherTable.addSubview(refreshControl) // not required when using UITableViewController
         // Do any additional setup after loading the view.
         weatherCitiesFromDataBase = DataBaseHelper.getCities()
         setupCustomNavigationBar()
@@ -113,6 +117,11 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     }
     
     // MARK: - IBActions
+    
+    @objc func refresh(sender:AnyObject) {
+        // Code to refresh table view
+        loadData()
+    }
     
     @objc func showCelsius()
     {
@@ -215,6 +224,7 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                     self.view.hideToastActivity()
             })
         }
+        self.refreshControl.endRefreshing()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
