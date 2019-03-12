@@ -1,5 +1,5 @@
 //
-//  WeatherAppTests.swift
+//  TestCityModel.swift
 //  WeatherAppTests
 //
 //  Created by Dennis Mostajo on 3/11/19.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import WeatherApp
 
-class WeatherAppTests: XCTestCase {
+class TestCityModel: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +19,17 @@ class WeatherAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitCityModel()
+    {
+        let city = CityModel()
+        city.id = 401
+        city.name = "Avantica Land"
+        city.country = "GP"
+        city.latitude = -666.999
+        city.longitude = 999.666
+        city.temp_celsius = 0.0
+        city.temp_fahrenheit = (city.temp_celsius * (9/5))+32
+        debugPrint("testInitCityModel: \(city.name) - \(city.country)")
+        XCTAssertNotNil(city)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

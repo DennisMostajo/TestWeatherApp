@@ -308,16 +308,6 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         self.present(alert, animated: true, completion: nil)
     }
     
-    /*
-     // MARK: - Navigation Londres, Nueva York, Tokio
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     // MARK: - UITableView
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
