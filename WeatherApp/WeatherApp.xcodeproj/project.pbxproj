@@ -32,6 +32,9 @@
 		B05537D4223742640063E604 /* TestDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537D3223742640063E604 /* TestDataBase.swift */; };
 		B05537D6223742EB0063E604 /* TestOpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537D5223742EB0063E604 /* TestOpenWeatherMapAPI.swift */; };
 		B05537D8223744D80063E604 /* TestCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537D7223744D80063E604 /* TestCodable.swift */; };
+		B05537DE22376F5D0063E604 /* TestWeatherItemCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537DD22376F5D0063E604 /* TestWeatherItemCalculation.swift */; };
+		B05537E02237763E0063E604 /* TestPerformanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537DF2237763E0063E604 /* TestPerformanceRequest.swift */; };
+		B05537E222377A3D0063E604 /* TestAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05537E122377A3D0063E604 /* TestAlamofire.swift */; };
 		B2D2B49D570EA826BD871EEF /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCE0948517A4114A7F7B40E /* Pods_WeatherApp.framework */; };
 		BB4F419EC8445E501ACAC014 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E7571837FAC445861538BE /* Pods_WeatherAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +83,9 @@
 		B05537D3223742640063E604 /* TestDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataBase.swift; sourceTree = "<group>"; };
 		B05537D5223742EB0063E604 /* TestOpenWeatherMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOpenWeatherMapAPI.swift; sourceTree = "<group>"; };
 		B05537D7223744D80063E604 /* TestCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodable.swift; sourceTree = "<group>"; };
+		B05537DD22376F5D0063E604 /* TestWeatherItemCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWeatherItemCalculation.swift; sourceTree = "<group>"; };
+		B05537DF2237763E0063E604 /* TestPerformanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPerformanceRequest.swift; sourceTree = "<group>"; };
+		B05537E122377A3D0063E604 /* TestAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlamofire.swift; sourceTree = "<group>"; };
 		B6DA0748C15F7FB0B38C0F06 /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE0F9EF28DDD08F60EC38CDB /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D5E7571837FAC445861538BE /* Pods_WeatherAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,9 @@
 				B05537D3223742640063E604 /* TestDataBase.swift */,
 				B05537D5223742EB0063E604 /* TestOpenWeatherMapAPI.swift */,
 				B05537D7223744D80063E604 /* TestCodable.swift */,
+				B05537DD22376F5D0063E604 /* TestWeatherItemCalculation.swift */,
+				B05537DF2237763E0063E604 /* TestPerformanceRequest.swift */,
+				B05537E122377A3D0063E604 /* TestAlamofire.swift */,
 			);
 			path = WeatherAppTests;
 			sourceTree = "<group>";
@@ -466,8 +475,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05537D4223742640063E604 /* TestDataBase.swift in Sources */,
+				B05537E222377A3D0063E604 /* TestAlamofire.swift in Sources */,
 				B05537CF22373FA80063E604 /* TestCityModel.swift in Sources */,
+				B05537DE22376F5D0063E604 /* TestWeatherItemCalculation.swift in Sources */,
 				B05537D8223744D80063E604 /* TestCodable.swift in Sources */,
+				B05537E02237763E0063E604 /* TestPerformanceRequest.swift in Sources */,
 				B05537D6223742EB0063E604 /* TestOpenWeatherMapAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
