@@ -203,12 +203,20 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                     //                debugPrint("getWeatherCity response:\(json)")
                     if responseRequest?.statusCode == 200
                     {
-                        let temp_celsius = json["main"]["temp"].doubleValue
-                        let temp_fahrenheit = (temp_celsius * (9/5))+32
-                        DataBaseHelper.updateCityTemp(city_id: city.id, celsius: temp_celsius, fahrenheit: temp_fahrenheit)
-                        self.view.hideToastActivity()
-                        self.weatherCitiesFromDataBase = DataBaseHelper.getCities()
-                        self.weatherTable.reloadData()
+                        do {
+                            let decoder = JSONDecoder()
+                            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                            let weatherCodable = try decoder.decode(CurrentWeather.self, from: responseData as! Data)
+//                            debugPrint("--->\(weatherCodable.name): \(String(describing: weatherCodable.main.temp))")
+                            let temp_celsius = weatherCodable.main.temp!
+                            let temp_fahrenheit = (temp_celsius * (9/5))+32
+                            DataBaseHelper.updateCityTemp(city_id: city.id, celsius: temp_celsius, fahrenheit: temp_fahrenheit)
+                            self.view.hideToastActivity()
+                            self.weatherCitiesFromDataBase = DataBaseHelper.getCities()
+                            self.weatherTable.reloadData()
+                        } catch let error {
+                            debugPrint("Error creating current weather from JSON because: \(error.localizedDescription)")
+                        }
                     }
                     else if (responseRequest?.statusCode == 400) || (responseRequest?.statusCode == 403) || (responseRequest?.statusCode == 500)
                     {
