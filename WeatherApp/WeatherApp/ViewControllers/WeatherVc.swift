@@ -198,6 +198,8 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                         let temp_fahrenheit = (temp_celsius * (9/5))+32
                         DataBaseHelper.updateCityTemp(city_id: city.id, celsius: temp_celsius, fahrenheit: temp_fahrenheit)
                         self.view.hideToastActivity()
+                        self.weatherCitiesFromDataBase = DataBaseHelper.getCities()
+                        self.weatherTable.reloadData()
                     }
                     else if (responseRequest?.statusCode == 400) || (responseRequest?.statusCode == 403) || (responseRequest?.statusCode == 500)
                     {
@@ -213,8 +215,6 @@ class WeatherVc: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                     self.view.hideToastActivity()
             })
         }
-        weatherCitiesFromDataBase = DataBaseHelper.getCities()
-        weatherTable.reloadData()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
