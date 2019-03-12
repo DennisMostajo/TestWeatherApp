@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else{
             debugPrint("AppDelegate: IS NOT FIRST TIME")
+            if DataBaseHelper.getCities()?.count == 0
+            {
+                DataBaseHelper.setDefaultCities()
+            }
         }
         return true
     }
